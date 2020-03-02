@@ -4,7 +4,7 @@
   "description": "Pokedex example",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint src/**"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/nadinho/pokedex-2020/issues"
   },
-  "homepage": "https://github.com/nadinho/pokedex-2020#readme"
+  "homepage": "https://github.com/nadinho/pokedex-2020#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
+    "prettier": "^1.19.1"
+  }
 }
