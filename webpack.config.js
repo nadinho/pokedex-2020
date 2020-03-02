@@ -13,5 +13,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Pokedex 2020'
     })
-  ]
+  ],
+  devServer: {
+    contentBase: './dist'
+  }
 };

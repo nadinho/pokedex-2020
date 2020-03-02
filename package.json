@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "test": "eslint src/**",
-    "build": "webpack"
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,8 @@
     "lint-staged": "^10.0.8",
     "prettier": "^1.19.1",
     "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   },
   "husky": {
     "hooks": {
