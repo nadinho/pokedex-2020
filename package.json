@@ -1,0 +1,38 @@
+{
+  "name": "pokedex-2020",
+  "version": "1.0.0",
+  "description": "Pokedex example",
+  "private": true,
+  "scripts": {
+    "test": "eslint src/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nadinho/pokedex-2020.git"
+  },
+  "keywords": [],
+  "author": "Nadine Gehrmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nadinho/pokedex-2020/issues"
+  },
+  "homepage": "https://github.com/nadinho/pokedex-2020#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
+  },
+  "lint-staged": {
+    "*.{js}": "eslint --fix",
+    "*.{js,css,scss,md,json}": "prettier --write"
+  }
+}
