@@ -1,13 +1,11 @@
-import './index.scss';
+import './title.scss';
 import { createElement } from '../lib/dom';
 
 export function title(text) {
-  const titleAttributes = {
+  const element = createElement('h1', {
     innerText: text,
     className: 'title'
-  };
-
-  const element = createElement('h1', titleAttributes);
+  });
 
   return element;
 }
