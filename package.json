@@ -4,7 +4,8 @@
   "description": "Pokedex example",
   "private": true,
   "scripts": {
-    "test": "eslint src/**"
+    "test": "eslint src/**",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
