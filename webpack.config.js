@@ -35,6 +35,11 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(ttf|eot|svg|otf|gif)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        include: SRC,
+        loader: 'file-loader'
       }
     ]
   }

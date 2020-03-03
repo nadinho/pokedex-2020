@@ -4,6 +4,7 @@ import { createTitle } from './components/title';
 import { createSearch } from './components/search';
 import { createPokemons } from './components/pokemons';
 import { appendContent } from './lib/dom';
+import Logo from './assets/pokeball.png';
 
 const allPokemons = ['Pikachu', 'Pichu', 'Marwinchu', 'Juliachu', 'Johannachu'];
 
@@ -16,10 +17,14 @@ export function app() {
   });
   const title = createTitle('Pokédex');
   const searchInput = createSearch();
+  const logo = createElement('img', {
+    className: 'logo',
+    src: Logo
+  });
 
   let pokemons = createPokemons(allPokemons);
 
-  appendContent(header, title);
+  appendContent(header, [logo, title]);
   appendContent(main, [searchInput, pokemons]);
 
   searchInput.addEventListener('input', event => {
