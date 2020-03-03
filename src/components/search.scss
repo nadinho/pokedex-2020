@@ -4,11 +4,12 @@
   background: rgba(247, 130, 130, 0.3);
   outline: none;
   border: none;
+  font-size: 1.1rem;
   border-bottom: 1px solid theme.$primary-color;
-  width: 140px;
-  padding: 4px 0px 6px 4px;
+  width: 200px;
+  padding: 6px 0px 6px 14px;
   text-align: center;
-  color: theme.$primary-color;
+  color: lighten(theme.$primary-color, 30%);
 
   &::placeholder {
     color: lighten(theme.$primary-color, 30%);
