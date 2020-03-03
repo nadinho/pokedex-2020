@@ -5,7 +5,7 @@ export function search() {
   const element = createElement('input', {
     className: 'search',
     type: 'search',
-    placeholder: 'Enter Pokemon name'
+    placeholder: 'Search Pokémon'
   });
 
   return element;

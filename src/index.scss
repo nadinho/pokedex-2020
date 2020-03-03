@@ -1,5 +1,23 @@
-$body-color: green;
+@use "./theme";
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
 body {
-  color: $body-color;
+  margin: 0;
+  background: linear-gradient(10deg, theme.$gradient-color, theme.$background-color, 
+);
+  // background-image: linear-gradient(
+  //   to bottom,
+  //   theme.$background-color,
+  //   theme.$secondary-color
+  // );
+  height: 100vh;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  color: theme.$primary-color;
 }

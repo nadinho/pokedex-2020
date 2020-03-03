@@ -1,5 +1,7 @@
+@use "../theme";
+
 .title {
-    margin: 0;
-    font-size: 2rem;
-    color: green;
+  margin: 0;
+  font-size: 2rem;
+  color: theme.$primary-color;
 }
