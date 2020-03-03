@@ -4,7 +4,7 @@ import { createTitle } from './components/title';
 import { createSearch } from './components/search';
 import { createPokemons } from './components/pokemons';
 import { appendContent } from './lib/dom';
-import Logo from './assets/pokeball.png';
+import Logo from './assets/pokeballl.svg';
 
 const allPokemons = [
   'Bulbasaur',
