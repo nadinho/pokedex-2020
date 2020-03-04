@@ -160,6 +160,15 @@ const allPokemons = [
   'Mew'
 ];
 
+function filterPokemons(searchValue) {
+  const lowerCaseSearchValue = searchValue.toLowerCase();
+
+  const filteredPokemons = allPokemons.filter(pokemon => {
+    return pokemon.toLowerCase().includes(lowerCaseSearchValue);
+  });
+  return filteredPokemons;
+}
+
 export function app() {
   const header = createElement('header', {
     className: 'header'
@@ -168,28 +177,28 @@ export function app() {
     className: 'main'
   });
   const title = createTitle('Pokédex');
-  const searchInput = createSearch();
+  const searchInput = createSearch(sessionStorage.getItem('searchValue'));
   const logo = createElement('img', {
     className: 'logo',
     src: Logo
   });
 
-  let pokemons = createPokemons(allPokemons);
+  let pokemons = null;
+  function setSearchResults() {
+    const filteredPokemons = filterPokemons(searchInput.value);
+    pokemons = createPokemons(filteredPokemons);
+    appendContent(main, pokemons);
+  }
+  setSearchResults();
 
   appendContent(header, [title]);
   appendContent(main, [logo, searchInput, pokemons]);
 
   searchInput.addEventListener('input', event => {
     main.removeChild(pokemons);
+    setSearchResults();
 
     const searchValue = event.target.value;
-    const lowerCaseSearchValue = searchValue.toLowerCase();
-    const filteredPokemons = allPokemons.filter(pokemon => {
-      return pokemon.toLowerCase().includes(lowerCaseSearchValue);
-    });
-
-    pokemons = createPokemons(filteredPokemons);
-    appendContent(main, pokemons);
 
     sessionStorage.setItem('searchValue', searchValue);
   });
