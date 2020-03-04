@@ -1,0 +1,22 @@
+@use "../theme.scss";
+
+.pokemons {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pokemon {
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 8px;
+  border: 1px dashed theme.$primary-color;
+  padding: 8px;
+  border-radius: 0.25rem;
+  font-weight: 900;
+}
+
+.pokemon:hover {
+  background: theme.$secondary-color;
+}

@@ -1,0 +1,10 @@
+@use "../theme";
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+.title {
+  margin: 0;
+  font-size: 2rem;
+
+  font-family: 'Press Start 2P', cursive;
+  color: theme.$primary-color;
+}

@@ -1,0 +1,18 @@
+@use "../theme";
+
+.search {
+  background: rgba(247, 130, 130, 0.3);
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+  border-bottom: 1px solid theme.$primary-color;
+  width: 200px;
+  padding: 6px 0px 6px 14px;
+  text-align: center;
+  font-style: italic;
+  color: lighten(theme.$primary-color, 30%);
+
+  &::placeholder {
+    color: lighten(theme.$primary-color, 30%);
+  }
+}
