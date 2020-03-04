@@ -182,13 +182,16 @@ export function app() {
   searchInput.addEventListener('input', event => {
     main.removeChild(pokemons);
 
-    const searchValue = event.target.value.toLowerCase();
+    const searchValue = event.target.value;
+    const lowerCaseSearchValue = searchValue.toLowerCase();
     const filteredPokemons = allPokemons.filter(pokemon => {
-      return pokemon.toLowerCase().includes(searchValue);
+      return pokemon.toLowerCase().includes(lowerCaseSearchValue);
     });
 
     pokemons = createPokemons(filteredPokemons);
     appendContent(main, pokemons);
+
+    sessionStorage.setItem('searchValue', searchValue);
   });
 
   return [header, main];
