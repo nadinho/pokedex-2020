@@ -11,6 +11,11 @@ export function createPokemons(items) {
       innerText: item,
       className: 'pokemon'
     });
+    element.addEventListener('click', () => {
+      const favorites = [item];
+      localStorage.setItem('favorites', JSON.stringify(favorites));
+    });
+
     appendContent(container, element);
   });
   return container;
