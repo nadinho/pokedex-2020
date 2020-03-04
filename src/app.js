@@ -4,7 +4,7 @@ import { createTitle } from './components/title';
 import { createSearch } from './components/search';
 import { createPokemons } from './components/pokemons';
 import { appendContent } from './lib/dom';
-import Logo from './assets/pokeballl.svg';
+import Logo from './assets/fav_pichu.png';
 
 const allPokemons = [
   'Bulbasaur',
@@ -176,8 +176,8 @@ export function app() {
 
   let pokemons = createPokemons(allPokemons);
 
-  appendContent(header, [logo, title]);
-  appendContent(main, [searchInput, pokemons]);
+  appendContent(header, [title]);
+  appendContent(main, [logo, searchInput, pokemons]);
 
   searchInput.addEventListener('input', event => {
     main.removeChild(pokemons);
