@@ -12,21 +12,7 @@ export function createSearchResults(props) {
       className: 'pokemon'
     });
     element.addEventListener('click', () => {
-      let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-
-      if (!favorites.includes(item)) {
-        favorites.push(item);
-      } else {
-        const itemIndex = favorites.indexOf(item);
-        favorites.splice(itemIndex, 1);
-      }
-
-      if (favorites.length > 4) {
-        favorites.splice(0, 1);
-      }
-
-      const favoritesJSON = JSON.stringify(favorites);
-      localStorage.setItem('favorites', favoritesJSON);
+      props.onSearchResultClick(item);
     });
 
     appendContent(container, element);
