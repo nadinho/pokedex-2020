@@ -64,6 +64,7 @@ export function app() {
       items: filteredPokemons,
       onSearchResultClick: handleSearchResultClick
     });
+
     appendContent(main, searchResults);
   }
   setSearchResults();
