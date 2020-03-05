@@ -6,6 +6,7 @@ import { createSearchResults } from './components/pokemons';
 import { appendContent } from './lib/dom';
 import Logo from './assets/fav_pichu.png';
 import { filterPokemons } from './lib/pokemonsTwo';
+import { createFavorites } from './components/favorites';
 
 export function app() {
   const header = createElement('header', {
@@ -21,6 +22,10 @@ export function app() {
   const logo = createElement('img', {
     className: 'logo',
     src: Logo
+  });
+
+  const favorites = createFavorites({
+    items: JSON.parse(localStorage.getItem('favorites'))
   });
 
   let searchResults = null;
@@ -43,5 +48,5 @@ export function app() {
     const searchValue = event.target.value;
     sessionStorage.setItem('searchValue', searchValue);
   });
-  return [header, main];
+  return [header, main, favorites];
 }

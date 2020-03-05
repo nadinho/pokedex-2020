@@ -1,0 +1,16 @@
+@use "../theme";
+
+.favorites {
+  margin: 10px;
+  border: 2px solid theme.$primary-color;
+  display: flex;
+}
+
+.favorite {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px;
+}
