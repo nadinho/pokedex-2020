@@ -9,8 +9,10 @@
 body {
   margin: 0;
   background: linear-gradient(
-    10deg,
+    140deg,
     theme.$gradient-color,
+    theme.$background-color,
+    theme.$background-color,
     theme.$background-color
   );
   // background-image: linear-gradient(
@@ -18,7 +20,7 @@ body {
   //   theme.$background-color,
   //   theme.$secondary-color
   // );
-  height: 100vh;
+  // height: 100vh;
   font-family: 'Spartan', sans-serif;
   font-size: 16px;
   color: theme.$primary-color;
