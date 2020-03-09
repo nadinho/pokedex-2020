@@ -1,0 +1,15 @@
+@use "../theme";
+
+.favorites {
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.favorite {
+  width: 120px;
+  height: 80px;
+  font-size: 0.8rem;
+  padding: 4px;
+  text-align: center;
+}
