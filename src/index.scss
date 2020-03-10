@@ -9,18 +9,15 @@
 body {
   margin: 0;
   background: linear-gradient(
-    10deg,
+    140deg,
     theme.$gradient-color,
+    theme.$background-color,
     theme.$background-color
   );
-  // background-image: linear-gradient(
-  //   to bottom,
-  //   theme.$background-color,
-  //   theme.$secondary-color
-  // );
+  background-attachment: fixed;
   height: 100vh;
   font-family: 'Spartan', sans-serif;
-  font-size: 16px;
+  font-size: 1.5rem;
   color: theme.$primary-color;
   display: flex;
   flex-direction: column;

@@ -11,7 +11,13 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Pokedex 2020'
+      title: 'Pokedex 2020',
+      meta: {
+        viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+        // Will generate: <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        'theme-color': '#4285f4'
+        // Will generate: <meta name="theme-color" content="#4285f4">
+      }
     })
   ],
   devServer: {

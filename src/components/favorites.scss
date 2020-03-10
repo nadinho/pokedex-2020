@@ -2,14 +2,25 @@
 
 .favorites {
   height: 100px;
-  margin: 10px;
+  width: 100%;
   padding: 10px;
+  position: fixed;
+  bottom: 0px;
+  background: linear-gradient(
+    0deg,
+    theme.$gradient-color,
+    theme.$background-color,
+    theme.$background-color,
+    theme.$background-color
+  );
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: inset 0 15px 5px -16px #fff;
 }
 
 .favorite {
-  width: 120px;
   height: 80px;
   font-size: 0.8rem;
-  padding: 4px;
+  padding: 10px;
   text-align: center;
 }
